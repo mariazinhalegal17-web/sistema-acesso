@@ -1,0 +1,18 @@
+body {
+    padding-top: 2rem;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .comprovante-print, .comprovante-print * {
+        visibility: visible;
+    }
+    .comprovante-print {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
