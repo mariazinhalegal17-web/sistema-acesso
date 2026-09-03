@@ -2,17 +2,63 @@ body {
     padding-top: 2rem;
 }
 
+#qrcode img, #qrcode canvas {
+    display: block;
+    margin: 0 auto;
+}
+
 @media print {
+    body {
+        background-color: #fff;
+        padding: 0;
+        margin: 0;
+    }
+
     body * {
         visibility: hidden;
     }
+
     .comprovante-print, .comprovante-print * {
         visibility: visible;
     }
+
     .comprovante-print {
         position: absolute;
-        left: 0;
+        left: 50%;
         top: 0;
+        transform: translateX(-50%);
         width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+        padding: 1rem;
+        border: 1px dashed #000;
+        text-align: center;
+    }
+
+    .comprovante-print article {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .comprovante-print header {
+        border-bottom: 1px solid #000;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    #comp-foto {
+        display: block;
+        margin: 0 auto;
+        max-width: 140px;
+        border: 1px solid #ccc;
+    }
+
+    #qrcode {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
     }
 }

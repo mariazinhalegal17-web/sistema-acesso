@@ -16,9 +16,12 @@
     <label for="matricula" style="text-align: left;">Matrícula do Funcionário</label>
     <input type="text" id="matricula" name="matricula" required placeholder="Ex: EMP-001">
 
-    <!-- Câmera grande e centralizada -->
+    <!-- Câmera grande e centralizada com indicador de status -->
     <label style="margin-top: 1.5rem; display: block; font-weight: bold;">Foto do Rosto</label>
-    <div style="display: flex; justify-content: center; margin: 1rem 0;">
+    <div id="camera-status" style="margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: 500; color: #4b5563;">
+        Inicializando câmera...
+    </div>
+    <div style="display: flex; justify-content: center; margin: 0.5rem 0 1rem 0;">
         <video id="video" autoplay playsinline style="width: 100%; max-width: 540px; height: 360px; object-fit: cover; background: #000; border-radius: 12px; border: 2px solid #374151; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"></video>
     </div>
     <canvas id="canvas" style="display: none;"></canvas>
